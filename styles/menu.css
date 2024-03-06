@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('../Images/fullrainbow.jpg');
+    background-color: rgba(255, 255, 255, 0.2);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Change the opacity of the background image */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/fullrainbow.jpg');
+    opacity: 0.8; /* Adjust opacity here */
+    z-index: -1;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  80px;
+    font-weight: 700;
+    color: #1D89AD;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.button {
+    background-color: transparent;
+    color: #1D89AD;
+    border: 4px solid #1D89AD;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 3rem;
+    font-style: normal;
+    text-decoration: none;
+    width: 50px; /* Set a fixed width for the buttons */
+    height: 50px; /* Set the height equal to the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 385px) {
+    .button {
+        width: calc(15% - 20px);
+        height: 30px; /* Ensure buttons remain square */
+        font-size: 2rem;
+        border: 3px solid #1D89AD ;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 386px) and (max-width: 576px) {
+    .button {
+        width: calc(15% - 20px);
+        height: 5vh; /* Ensure buttons remain square */
+        font-size: 3rem;
+        border: 3px solid #1D89AD ;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .button {
+        width: calc(25% - 20px);
+        height: 50px; /* Ensure buttons remain square */
+    }
+
+    .title{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .button {
+        width: calc(10% - 20px);
+        height: 50px; /* Ensure buttons remain square */
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
+</head>
+<body>
+    <a-scene embedded arjs>
+
+       
+     
+        
+        <a-marker present="hiro">
+            
+            <a-entity 
+            gltf-model=”url(Models/Apple/Apple.glb)”>
+            </a-entity>
+        </a-marker>
+        <audio id="applemp3" src="mp3/apple.mp3" autoplay="false" ></audio>
+        <a-entity id="applemp3" sound="src: url(mp3/apple.mp3); autoplay: false"></a-entity>
+        <a-entity camera></a-entity>
+      
+    </a-scene>
+
+</body>
+
+</html> 
